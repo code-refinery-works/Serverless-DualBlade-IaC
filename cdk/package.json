@@ -1,0 +1,28 @@
+{
+  "name": "serverless-api-cdk",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build":  "tsc",
+    "synth":  "cdk synth",
+    "deploy": "cdk deploy",
+    "diff":   "cdk diff",
+    "destroy":"cdk destroy"
+  },
+  "dependencies": {
+    "aws-cdk-lib":          "^2.130.0",
+    "constructs":           "^10.3.0",
+    "source-map-support":   "^0.5.21"
+  },
+  "devDependencies": {
+    "aws-cdk":              "^2.130.0",
+    "typescript":           "^5.4.0",
+    "@types/node":          "^20.0.0",
+    "ts-node":              "^10.9.0"
+  },
+  "bin": { "app": "bin/app.ts" },
+  "cdk": {
+    "app":     "npx ts-node --prefer-ts-exts bin/app.ts",
+    "context": { "env": "dev", "project": "serverless-api" }
+  }
+}
